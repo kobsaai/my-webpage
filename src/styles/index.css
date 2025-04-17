@@ -1,0 +1,23 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+/* PrimeReact Theme import */
+@import "primereact/resources/themes/lara-light-blue/theme.css"
+  layer(primereact);
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+/* OVERRIDE: Disable Menubar Mobile Collapse */
+@layer utilities {
+  @media screen and (max-width: 960px) {
+    .p-menubar {
+      position: static !important;
+    }
+  }
+}
