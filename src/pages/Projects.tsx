@@ -1,5 +1,11 @@
+import ucImage from "../assets/underconstruction.png";
+
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <div>
+      <img src={ucImage} />
+    </div>
+  );
 }
 
 export default Projects;
