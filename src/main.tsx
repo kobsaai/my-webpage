@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./styles/index.css";
 import App from "./App";
-import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
+import { PrimeReactProvider } from "primereact/api";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
