@@ -1,6 +1,31 @@
+import { useLocation } from "react-router-dom";
 import myImage from "../assets/profilepicture.png";
+import TechSkills from "../components/TechSkills";
+import { useEffect } from "react";
 
 function Home() {
+  const location = useLocation();
+
+  // Effekt, der bei Seitenladung oder bei Hash-Änderung ausgeführt wird
+  useEffect(() => {
+    if (location.hash) {
+      // Kurzer Timeout, damit der DOM vollständig geladen wird
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          const yOffset = -70; // Offset für die Navbar-Höhe
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 300); // Etwas längerer Timeout für zuverlässigeres Laden
+    } else {
+      // Wenn kein Hash vorhanden ist, scrolle zum Anfang der Seite
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -45,9 +70,11 @@ function Home() {
 
           {/* About Text Content */}
           <div className="flex-1">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-6">
-              Hallo, ich bin Benjamin!
-            </h3>
+            <section id="about">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-6">
+                Hallo, ich bin Benjamin!
+              </h3>
+            </section>
 
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Als Fullstack Software Developer mit Wurzeln im Finanzwesen
@@ -55,39 +82,42 @@ function Home() {
               Kundenbedürfnisse und Geschäftsprozesse.
             </p>
 
-            <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
-              Mein Werdegang
-            </h4>
-            <p className="text-gray-600 mb-5 leading-relaxed">
-              Meine Reise in die Welt der Softwareentwicklung begann bereits
-              früh. Während meiner Schulzeit am Thomas Mann Gymnasium in
-              Budapest entwickelte ich eine Leidenschaft für Mathematik und
-              Physik, die mich zum Informatikstudium an der
-              Eötvös-Loránd-Universität führte. Parallel dazu sammelte ich erste
-              praktische Erfahrungen im elterlichen Betrieb, wo ich an der
-              Entwicklung und Integration von Datenbanken und der
-              Automatisierung von Geschäftsabläufen arbeitete.
-            </p>
+            <TechSkills />
+            <section id="development">
+              <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+                Mein Werdegang
+              </h4>
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                Meine Reise in die Welt der Softwareentwicklung begann bereits
+                früh. Während meiner Schulzeit am Thomas Mann Gymnasium in
+                Budapest entwickelte ich eine Leidenschaft für Mathematik und
+                Physik, die mich zum Informatikstudium an der
+                Eötvös-Loránd-Universität führte. Parallel dazu sammelte ich
+                erste praktische Erfahrungen im elterlichen Betrieb, wo ich an
+                der Entwicklung und Integration von Datenbanken und der
+                Automatisierung von Geschäftsabläufen arbeitete.
+              </p>
 
-            <p className="text-gray-600 mb-5 leading-relaxed">
-              Mein beruflicher Weg führte mich zunächst in die Finanzbranche, wo
-              ich als selbständiger Handelsvertreter wertvolle Erfahrungen im
-              Umgang mit Kunden und in der Entwicklung maßgeschneiderter
-              Lösungen sammeln konnte. Gleichzeitig übernahm ich als Teamleiter
-              bei Events und Messen Verantwortung für Teams mit bis zu 30
-              Personen und entwickelte dabei meine Führungsqualitäten weiter.
-            </p>
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                Mein beruflicher Weg führte mich zunächst in die Finanzbranche,
+                wo ich als selbständiger Handelsvertreter wertvolle Erfahrungen
+                im Umgang mit Kunden und in der Entwicklung maßgeschneiderter
+                Lösungen sammeln konnte. Gleichzeitig übernahm ich als
+                Teamleiter bei Events und Messen Verantwortung für Teams mit bis
+                zu 30 Personen und entwickelte dabei meine Führungsqualitäten
+                weiter.
+              </p>
 
-            <p className="text-gray-600 mb-5 leading-relaxed">
-              2021 entschied ich mich, meiner Leidenschaft für die Informatik
-              vollständig zu folgen und absolvierte eine Ausbildung zum
-              Fachinformatiker für Anwendungsentwicklung. Diese formale
-              Ausbildung, kombiniert mit meinem Praktikum und der anschließenden
-              Festanstellung bei Team Internet Service GmbH, hat mein
-              Verständnis für moderne Softwareentwicklung vertieft und
-              erweitert.
-            </p>
-
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                2021 entschied ich mich, meiner Leidenschaft für die Informatik
+                vollständig zu folgen und absolvierte eine Ausbildung zum
+                Fachinformatiker für Anwendungsentwicklung. Diese formale
+                Ausbildung, kombiniert mit meinem Praktikum und der
+                anschließenden Festanstellung bei Team Internet Service GmbH,
+                hat mein Verständnis für moderne Softwareentwicklung vertieft
+                und erweitert.
+              </p>
+            </section>
             <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
               Meine Philosophie
             </h4>
