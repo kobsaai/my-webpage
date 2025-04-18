@@ -5,6 +5,7 @@ import Features from "./pages/Features";
 import Projects from "./pages/Projects";
 import { useEffect } from "react";
 import CombinedNavbar from "./components/CombinedNavbar";
+import Contact from "./pages/Contact";
 
 function App() {
   const scrollToSection = (sectionId: string) => {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/features" element={<Features />} />
             <Route path="/Projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

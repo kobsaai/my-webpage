@@ -187,13 +187,13 @@ function Home() {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <a
-                href="#contact"
+                href="/contact"
                 className="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition-colors"
               >
                 Kontakt aufnehmen
               </a>
               <a
-                href="#projects"
+                href="/projects"
                 className="px-6 py-3 border-2 border-blue-500 text-blue-500 font-semibold rounded hover:bg-blue-50 transition-colors"
               >
                 Meine Projekte ansehen
