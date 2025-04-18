@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Features from "./pages/Features";
 import Projects from "./pages/Projects";
 import { useEffect } from "react";
-import NavbarNew from "./components/NavbarNew";
 import CombinedNavbar from "./components/CombinedNavbar";
 
 function App() {
