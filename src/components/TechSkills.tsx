@@ -16,48 +16,43 @@ interface Skill {
 const TechSkills: React.FC = () => {
   const skills: Skill[] = [
     // Frontend
-    { name: "React", level: "Proficient", category: "Frontend" },
-    { name: "TypeScript", level: "Proficient", category: "Frontend" },
-    { name: "JavaScript", level: "Expert", category: "Frontend" },
-    { name: "HTML/CSS", level: "Expert", category: "Frontend" },
-    { name: "Tailwind CSS", level: "Competent", category: "Frontend" },
+    { name: "React", level: "Competent", category: "Frontend" },
+    { name: "TypeScript", level: "Advanced Beginner", category: "Frontend" },
+    { name: "JavaScript", level: "Competent", category: "Frontend" },
+    { name: "HTML/CSS", level: "Advanced Beginner", category: "Frontend" },
+    { name: "Tailwind CSS", level: "Advanced Beginner", category: "Frontend" },
 
     // Backend
-    { name: "Python", level: "Proficient", category: "Backend" },
-    { name: "Java", level: "Competent", category: "Backend" },
+    { name: "Python", level: "Competent", category: "Backend" },
+    { name: "Java", level: "Beginner", category: "Backend" },
     { name: "PHP", level: "Advanced Beginner", category: "Backend" },
     { name: "C++", level: "Beginner", category: "Backend" },
-    { name: "VBA", level: "Competent", category: "Backend" },
+    { name: "VBA", level: "Advanced Beginner", category: "Backend" },
 
     // Database
-    { name: "MySQL", level: "Proficient", category: "Database" },
+    { name: "MySQL", level: "Advanced Beginner", category: "Database" },
     { name: "PostgreSQL", level: "Competent", category: "Database" },
-    { name: "AWS Athena", level: "Competent", category: "Database" },
+    { name: "AWS Athena", level: "Advanced Beginner", category: "Database" },
 
     // DevOps
-    { name: "AWS Lambda", level: "Competent", category: "DevOps" },
-    { name: "AWS S3", level: "Proficient", category: "DevOps" },
-    { name: "AWS RDS", level: "Competent", category: "DevOps" },
-    { name: "AWS DynamoDB", level: "Competent", category: "DevOps" },
-    { name: "AWS EC2", level: "Advanced Beginner", category: "DevOps" },
-    { name: "AWS CloudWatch", level: "Competent", category: "DevOps" },
-    { name: "Docker", level: "Competent", category: "DevOps" },
+    { name: "AWS", level: "Advanced Beginner", category: "DevOps" },
+    { name: "Docker", level: "Advanced Beginner", category: "DevOps" },
     { name: "Git", level: "Proficient", category: "DevOps" },
     { name: "CI/CD", level: "Advanced Beginner", category: "DevOps" },
   ];
 
-  const getLevelClass = (level: SkillLevel): string => {
+  const getLevelValue = (level: SkillLevel): number => {
     switch (level) {
       case "Beginner":
-        return "bg-gray-200 w-1/5";
+        return 1;
       case "Advanced Beginner":
-        return "bg-blue-200 w-2/5";
+        return 2;
       case "Competent":
-        return "bg-blue-300 w-3/5";
+        return 3;
       case "Proficient":
-        return "bg-blue-400 w-4/5";
+        return 4;
       case "Expert":
-        return "bg-blue-500 w-full";
+        return 5;
     }
   };
 
@@ -90,12 +85,32 @@ const TechSkills: React.FC = () => {
                           {skill.level}
                         </span>
                       </div>
-                      <div className="h-2 bg-gray-100 rounded-full">
-                        <div
-                          className={`h-full rounded-full ${getLevelClass(
-                            skill.level
-                          )}`}
-                        ></div>
+                      <div className="flex h-2 bg-gray-100 rounded-full">
+                        {[1, 2, 3, 4, 5].map((segment) => {
+                          const segmentColors = [
+                            "bg-gray-200", // Beginner
+                            "bg-blue-200", // Advanced Beginner
+                            "bg-blue-300", // Competent
+                            "bg-blue-400", // Proficient
+                            "bg-blue-500", // Expert
+                          ];
+
+                          const active = getLevelValue(skill.level) >= segment;
+
+                          return (
+                            <div
+                              key={segment}
+                              className={`h-full flex-1 ${
+                                active
+                                  ? segmentColors[segment - 1]
+                                  : "bg-gray-100"
+                              } 
+                                ${segment === 1 ? "rounded-l-full" : ""} 
+                                ${segment === 5 ? "rounded-r-full" : ""}
+                                ${segment > 1 ? "ml-0.5" : ""}`}
+                            ></div>
+                          );
+                        })}
                       </div>
                     </div>
                   ))}
