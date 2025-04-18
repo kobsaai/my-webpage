@@ -59,18 +59,17 @@ export default function CombinedNavbar() {
   const navItems = [
     { to: "/", label: "Home", icon: <Home size={18} />, isSection: false },
     {
-      to: "about",
-      label: "Über mich",
-      icon: <Info size={18} />,
-      isSection: true,
-    },
-    {
       to: "skills",
       label: "Skills",
       icon: <Settings size={18} />,
       isSection: true,
     },
-    { to: "development", label: "Werdegang", isSection: true },
+    {
+      to: "about",
+      label: "Über mich",
+      icon: <Info size={18} />,
+      isSection: true,
+    },
     {
       to: "/projects",
       label: "Projekte",

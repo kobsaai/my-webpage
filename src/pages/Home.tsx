@@ -70,11 +70,9 @@ function Home() {
 
           {/* About Text Content */}
           <div className="flex-1">
-            <section id="about">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-6">
-                Hallo, ich bin Benjamin!
-              </h3>
-            </section>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-6">
+              Hallo, ich bin Benjamin!
+            </h3>
 
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Als Fullstack Software Developer mit Wurzeln im Finanzwesen
@@ -83,7 +81,7 @@ function Home() {
             </p>
 
             <TechSkills />
-            <section id="development">
+            <section id="about">
               <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
                 Mein Werdegang
               </h4>
