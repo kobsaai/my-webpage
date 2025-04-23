@@ -2,7 +2,7 @@ function Projects() {
   return (
     <div>
       <iframe
-        src="http://54.171.228.69:8501/"
+        src="finance-dashboard.benjamin-koller.click"
         title="Dashboard"
         width="100%"
         height="800px"
