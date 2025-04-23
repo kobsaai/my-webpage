@@ -1,9 +1,13 @@
-import ucImage from "../assets/underconstruction.png";
-
 function Projects() {
   return (
     <div>
-      <img src={ucImage} />
+      <iframe
+        src="http://54.171.228.69:8501/"
+        title="Dashboard"
+        width="100%"
+        height="800px"
+        style={{ border: "none" }}
+      />
     </div>
   );
 }
