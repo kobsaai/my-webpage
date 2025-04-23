@@ -27,7 +27,7 @@ function Home() {
   }, [location]);
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-16 relative">
           Über mich
@@ -35,7 +35,6 @@ function Home() {
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12">
-          {/* Profile Image & Social Links */}
           <div className="flex-none text-center md:w-64">
             <div className="relative w-64 h-64 mx-auto">
               <img
@@ -44,35 +43,34 @@ function Home() {
                 className="rounded-full w-full h-full object-cover border-4 border-blue-500 shadow-lg"
               />
             </div>
-            {/* social media links if wanted 
             <div className="flex justify-center gap-4 mt-6">
               <a
-                href="#"
+                href="https://github.com/kobsaai"
                 className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
               >
-                <i className="fab fa-github text-lg"></i>
+                <i className="pi pi-github text-lg"></i>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/benjamin-koller-click"
                 className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
               >
-                <i className="fab fa-linkedin-in text-lg"></i>
+                <i className="pi pi-linkedin text-lg"></i>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/benni.koller.berlin/"
                 className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
               >
-                <i className="fab fa-xing text-lg"></i>
+                <i className="pi pi-instagram text-lg"></i>
               </a>
             </div>
-          */}
           </div>
 
-          {/* About Text Content */}
           <div className="flex-1">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-6">
-              Hallo, ich bin Benjamin!
-            </h3>
+            <section id="start">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-6">
+                Hallo, ich bin Benjamin!
+              </h3>
+            </section>
 
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Als Fullstack Software Developer mit Wurzeln im Finanzwesen

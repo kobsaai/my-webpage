@@ -57,7 +57,7 @@ export default function CombinedNavbar() {
   };
 
   const navItems = [
-    { to: "/", label: "Home", icon: <Home size={18} />, isSection: false },
+    { to: "start", label: "Start", icon: <Home size={18} />, isSection: true },
     {
       to: "skills",
       label: "Skills",
