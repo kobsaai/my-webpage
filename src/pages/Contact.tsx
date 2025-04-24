@@ -1,9 +1,10 @@
-import ucImage from "../assets/underconstruction.png";
+import ContactForm from "../components/ContactForm";
 
 function Contact() {
   return (
-    <div>
-      <img src={ucImage} />
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-6">Kontaktieren Sie uns</h1>
+      <ContactForm />
     </div>
   );
 }
