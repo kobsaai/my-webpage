@@ -53,9 +53,7 @@ function ContactForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Kontakt</h2>
-
+    <div className="max-w-md mx-auto p-6 bg-blue-50 rounded-lg shadow-md">
       {status && (
         <div
           className={`p-4 mb-4 rounded ${
