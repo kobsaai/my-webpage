@@ -2,7 +2,9 @@ import { Panel } from "primereact/panel";
 function Projects() {
   return (
     <div>
-      <Panel></Panel>
+      <Panel>
+        <h1>Under Construction, Sorry 🤦‍♂️🤔</h1>
+      </Panel>
     </div>
   );
 }
