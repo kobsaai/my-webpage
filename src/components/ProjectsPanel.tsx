@@ -1,4 +1,3 @@
-import React from "react";
 import { Tooltip } from "primereact/tooltip";
 
 interface ProjectsPanelProps {
@@ -19,10 +18,10 @@ function ProjectsPanel({
   return (
     <div
       onClick={onClick}
-      className="main-container p-5 border border-gray-200 bg-white text-gray-600 rounded-br-[6px] rounded-bl-[6px] border-t-0 max-w-80"
+      className="main-container p-5 border border-gray-200 bg-white text-gray-600 rounded-[6px]  max-w-80 transition-all duration-200 hover:shadow-md hover:border-gray-400 hover:border-t-[1px] hover:bg-gray-50"
     >
       <Tooltip target=".main-container">
-        <div>
+        <div className="max-w-72">
           <h3>Ziel</h3>
           <p>{summary}</p>
           <ul className="mt-2 text-sm ">
