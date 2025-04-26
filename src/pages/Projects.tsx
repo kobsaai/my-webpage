@@ -16,7 +16,7 @@ function Projects() {
       </p>
       <ProjectsPanel
         header="Private Finance Dashboard"
-        image="public\finance-dashboard.png"
+        image="/finance-dashboard.png"
         summary="normalisiert Daten von gegebenem Bankauszug und erstellt kategorisierbare visualisierung als Tabellen und Diagramme"
         techstack={{
           Sprache: "Python",
