@@ -1,6 +1,7 @@
 import { Tooltip } from "primereact/tooltip";
 
 interface ProjectsPanelProps {
+  name: string;
   header: string;
   image: string;
   summary: string;
@@ -9,6 +10,7 @@ interface ProjectsPanelProps {
 }
 
 function ProjectsPanel({
+  name,
   header,
   image,
   summary,
@@ -18,9 +20,9 @@ function ProjectsPanel({
   return (
     <div
       onClick={onClick}
-      className="main-container p-5 border border-gray-200 bg-white text-gray-600 rounded-[6px]  max-w-80 transition-all duration-200 hover:shadow-md hover:border-gray-400 hover:border-t-[1px] hover:bg-gray-50"
+      className={`main-container-${name} m-2 p-5 border border-gray-200 bg-white text-gray-600 rounded-[6px]  max-w-80 transition-all duration-200 hover:shadow-md hover:border-gray-400 hover:border-t-[1px] hover:bg-gray-50`}
     >
-      <Tooltip target=".main-container">
+      <Tooltip target={`.main-container-${name}`}>
         <div className="max-w-72">
           <h3>Ziel</h3>
           <p>{summary}</p>

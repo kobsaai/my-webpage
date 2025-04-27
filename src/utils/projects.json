@@ -1,0 +1,28 @@
+{
+  "project": {
+    "finance_dashboard": {
+      "header": "Private Finance Dashboard",
+      "image": "/finance-dashboard.png",
+      "summary": "normalisiert Daten von gegebenem Bankauszug und erstellt kategorisierbare visualisierung als Tabellen und Diagramme",
+      "techstack": {
+        "Sprache": "Python",
+        "Hosting": "AWS EC2",
+        "Verarbeitung": "AWS Lambda"
+      },
+      "github": "https://github.com/kobsaai/finance-dashboard",
+      "demo": true
+    },
+    "portfolio_page": {
+      "header": "Personal Portfolio Webpage",
+      "image": "/portfolio-website.png",
+      "summary": "",
+      "techstack": {
+        "Sprache": "React/Typescript",
+        "Hosting": "AWS S3, Route53",
+        "Others": "TailwindCss, Vite"
+      },
+      "github": "https://github.com/kobsaai/my-webpage",
+      "demo": false
+    }
+  }
+}
