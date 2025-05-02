@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import myImage from "../assets/profilepicture.png";
 import TechSkills from "../components/TechSkills";
 import { useEffect } from "react";
+import BasicBody from "../components/BasicBody";
 
 function Home() {
   const location = useLocation();
@@ -27,11 +28,11 @@ function Home() {
   }, [location]);
 
   return (
-    <section id="" className="py-20 bg-gray-50">
+    <section id="" className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16 relative">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-16 relative">
           Über mich
-          <span className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500"></span>
+          <span className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 dark:bg-blue-300"></span>
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12">
@@ -40,25 +41,25 @@ function Home() {
               <img
                 src={myImage}
                 alt="Benjamin Koller"
-                className="rounded-full w-full h-full object-cover border-4 border-blue-500 shadow-lg"
+                className="rounded-full w-full h-full object-cover border-4 border-blue-500 dark:border-blue-300 shadow-lg"
               />
             </div>
             <div className="flex justify-center gap-4 mt-6">
               <a
                 href="https://github.com/kobsaai"
-                className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 bg-blue-500 dark:bg-blue-300 rounded-full text-white dark:text-black hover:bg-blue-600 dark:hover:bg-blue-200 transition-all transform hover:-translate-y-1"
               >
                 <i className="pi pi-github text-lg"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/benjamin-koller-click"
-                className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 bg-blue-500 dark:bg-blue-300 rounded-full text-white dark:text-black hover:bg-blue-600 dark:hover:bg-blue-200 transition-all transform hover:-translate-y-1"
               >
                 <i className="pi pi-linkedin text-lg"></i>
               </a>
               <a
                 href="https://www.instagram.com/benni.koller.berlin/"
-                className="flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-all transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 bg-blue-500 dark:bg-blue-300 rounded-full text-white dark:text-black hover:bg-blue-600 dark:hover:bg-blue-200 transition-all transform hover:-translate-y-1"
               >
                 <i className="pi pi-instagram text-lg"></i>
               </a>
@@ -67,12 +68,12 @@ function Home() {
 
           <div className="flex-1">
             <section id="start">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
                 Hallo, ich bin Benjamin!
               </h3>
             </section>
 
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
               Als Fullstack Software Developer mit Wurzeln im Finanzwesen
               verbinde ich technische Expertise mit einem tiefen Verständnis für
               Kundenbedürfnisse und Geschäftsprozesse.
@@ -80,10 +81,10 @@ function Home() {
 
             <TechSkills />
             <section id="about">
-              <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+              <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
                 Mein Werdegang
               </h4>
-              <p className="text-gray-600 mb-5 leading-relaxed">
+              <BasicBody>
                 Meine Reise in die Welt der Softwareentwicklung begann bereits
                 früh. Während meiner Schulzeit am Thomas Mann Gymnasium in
                 Budapest entwickelte ich eine Leidenschaft für Mathematik und
@@ -92,9 +93,9 @@ function Home() {
                 erste praktische Erfahrungen im elterlichen Betrieb, wo ich an
                 der Entwicklung und Integration von Datenbanken und der
                 Automatisierung von Geschäftsabläufen arbeitete.
-              </p>
+              </BasicBody>
 
-              <p className="text-gray-600 mb-5 leading-relaxed">
+              <BasicBody>
                 Mein beruflicher Weg führte mich zunächst in die Finanzbranche,
                 wo ich als selbständiger Handelsvertreter wertvolle Erfahrungen
                 im Umgang mit Kunden und in der Entwicklung maßgeschneiderter
@@ -102,9 +103,9 @@ function Home() {
                 Teamleiter bei Events und Messen Verantwortung für Teams mit bis
                 zu 30 Personen und entwickelte dabei meine Führungsqualitäten
                 weiter.
-              </p>
+              </BasicBody>
 
-              <p className="text-gray-600 mb-5 leading-relaxed">
+              <BasicBody>
                 2021 entschied ich mich, meiner Leidenschaft für die Informatik
                 vollständig zu folgen und absolvierte eine Ausbildung zum
                 Fachinformatiker für Anwendungsentwicklung. Diese formale
@@ -112,12 +113,12 @@ function Home() {
                 anschließenden Festanstellung bei Team Internet Service GmbH,
                 hat mein Verständnis für moderne Softwareentwicklung vertieft
                 und erweitert.
-              </p>
+              </BasicBody>
             </section>
-            <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+            <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
               Meine Philosophie
             </h4>
-            <p className="text-gray-600 mb-5 leading-relaxed">
+            <BasicBody>
               In meiner Arbeit als Entwickler strebe ich danach, komplexe
               technische Herausforderungen in intuitive und effiziente Lösungen
               zu verwandeln. Ich glaube fest daran, dass gute Software nicht nur
@@ -125,7 +126,7 @@ function Home() {
               Erfahrung in der Kundenberatung hat mir gezeigt, wie wichtig es
               ist, die tatsächlichen Bedürfnisse der Endnutzer zu verstehen und
               diese in den Mittelpunkt der Entwicklung zu stellen.
-            </p>
+            </BasicBody>
 
             <blockquote className="border-l-4 border-blue-500 pl-6 py-4 my-8 italic text-lg text-gray-700">
               "Technologie sollte Probleme lösen, nicht neue schaffen. Mein Ziel
@@ -133,10 +134,10 @@ function Home() {
               ist, sondern auch echten Mehrwert für ihre Nutzer bietet."
             </blockquote>
 
-            <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+            <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
               Meine technische Expertise
             </h4>
-            <p className="text-gray-600 mb-5 leading-relaxed">
+            <BasicBody>
               Als Fullstack-Entwickler arbeite ich mit einem breiten Spektrum an
               Technologien. Im Frontend setze ich auf moderne
               JavaScript-Frameworks wie React, kombiniert mit TypeScript für
@@ -145,12 +146,12 @@ function Home() {
               Cloud-Lösungen. Mein Verständnis von Datenbanksystemen und
               DevOps-Praktiken rundet mein Profil ab und ermöglicht es mir, am
               gesamten Entwicklungszyklus mitzuwirken.
-            </p>
+            </BasicBody>
 
-            <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+            <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
               Neben der Arbeit
             </h4>
-            <p className="text-gray-600 mb-5 leading-relaxed">
+            <BasicBody>
               Wenn ich nicht gerade code, verbringe ich Zeit mit meinem Hund
               Bronco, der mich zu regelmäßigen Pausen und Spaziergängen an der
               frischen Luft zwingt – was meiner Kreativität und
@@ -159,19 +160,19 @@ function Home() {
               strategische Tiefe des Spiels. Seit kurzem habe ich auch das
               Golfen für mich entdeckt und arbeite kontinuierlich daran, mein
               Handicap zu verbessern.
-            </p>
+            </BasicBody>
 
-            <p className="text-gray-600 mb-5 leading-relaxed">
+            <BasicBody>
               Diese Interessen helfen mir nicht nur dabei, einen klaren Kopf zu
               bewahren, sondern lehren mich auch wertvolle Lektionen über
               Teamarbeit, Strategie und kontinuierliche Verbesserung –
               Prinzipien, die ich auch in meiner Arbeit als Entwickler anwende.
-            </p>
+            </BasicBody>
 
-            <h4 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+            <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
               Meine Zukunftsvision
             </h4>
-            <p className="text-gray-600 mb-5 leading-relaxed">
+            <BasicBody>
               Ich strebe danach, mich kontinuierlich weiterzuentwickeln und mein
               Wissen in den Bereichen Cloud-Architektur, DevOps und moderne
               Frontend-Frameworks zu vertiefen. Langfristig möchte ich an
@@ -179,7 +180,7 @@ function Home() {
               den Alltag der Menschen haben, und meine vielfältigen Erfahrungen
               einbringen, um Brücken zwischen Technologie und
               Benutzerbedürfnissen zu bauen.
-            </p>
+            </BasicBody>
 
             <div className="flex flex-wrap gap-4 mt-10">
               <a

@@ -2,12 +2,13 @@ import { useState } from "react";
 import ProjectsPanel from "../components/ProjectsPanel";
 import { Dialog } from "primereact/dialog";
 import projectsList from "../utils/projects.json";
+
 function Projects() {
   const [iframeVisible, setIframeVisible] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <div>
+    <div className="py-20 bg-gray-50">
       <p className="m-2">
         Da ich derzeit nur an Firmeninternen Projekten arbeite und diese nicht
         für die Öffentlichkeit sind kann ich hier keine beruflichen Projekte

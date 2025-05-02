@@ -31,7 +31,7 @@ function NavbarNew({ scrollToSection }: NavbarProps) {
 
   return (
     <nav
-      className={`w-full z-50 transition-all duration-300 ${
+      className={`w-full z-50 transition-all duration-300 dark:bg-black ${
         isSticky
           ? "fixed top-0 left-0 right-0 bg-white shadow-md py-2"
           : "relative bg-transparent py-4"

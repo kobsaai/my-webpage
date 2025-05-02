@@ -59,17 +59,20 @@ const TechSkills: React.FC = () => {
   const categories = Array.from(new Set(skills.map((skill) => skill.category)));
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16 relative">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-16 relative">
           Technische Fähigkeiten
           <span className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500"></span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {categories.map((category) => (
-            <div key={category} className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            <div
+              key={category}
+              className="bg-gray-50 dark:bg-gray-950 p-6 rounded-lg shadow-md"
+            >
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
                 {category}
               </h3>
               <div className="space-y-6">
@@ -78,21 +81,21 @@ const TechSkills: React.FC = () => {
                   .map((skill) => (
                     <div key={skill.name} className="space-y-2">
                       <div className="flex justify-between">
-                        <span className="font-medium text-gray-700">
+                        <span className="font-medium text-gray-700 dark:text-gray-300">
                           {skill.name}
                         </span>
-                        <span className="text-sm text-gray-500">
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
                           {skill.level}
                         </span>
                       </div>
-                      <div className="flex h-2 bg-gray-100 rounded-full">
+                      <div className="flex h-2 bg-gray-100 dark:bg-gray-900 rounded-full">
                         {[1, 2, 3, 4, 5].map((segment) => {
                           const segmentColors = [
-                            "bg-gray-200", // Beginner
-                            "bg-blue-200", // Advanced Beginner
-                            "bg-blue-300", // Competent
-                            "bg-blue-400", // Proficient
-                            "bg-blue-500", // Expert
+                            "bg-gray-200 dark:bg-orange-200", // Beginner
+                            "bg-blue-200 dark:bg-orange-300", // Advanced Beginner
+                            "bg-blue-300 dark:bg-orange-400", // Competent
+                            "bg-blue-400 dark:bg-orange-500", // Proficient
+                            "bg-blue-500 dark:bg-orange-600", // Expert
                           ];
 
                           const active = getLevelValue(skill.level) >= segment;
@@ -103,7 +106,7 @@ const TechSkills: React.FC = () => {
                               className={`h-full flex-1 ${
                                 active
                                   ? segmentColors[segment - 1]
-                                  : "bg-gray-100"
+                                  : "bg-gray-100 "
                               } 
                                 ${segment === 1 ? "rounded-l-full" : ""} 
                                 ${segment === 5 ? "rounded-r-full" : ""}
@@ -122,24 +125,34 @@ const TechSkills: React.FC = () => {
         <div className="mt-12 text-center">
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
-              <span className="text-sm text-gray-600">Beginner</span>
+              <div className="w-4 h-4 bg-gray-200 dark:bg-orange-200 rounded-full"></div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Beginner
+              </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-blue-200 rounded-full"></div>
-              <span className="text-sm text-gray-600">Advanced Beginner</span>
+              <div className="w-4 h-4 bg-blue-200 dark:bg-orange-300 rounded-full"></div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Advanced Beginner
+              </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-blue-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Competent</span>
+              <div className="w-4 h-4 bg-blue-300 dark:bg-orange-400 rounded-full"></div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Competent
+              </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-blue-400 rounded-full"></div>
-              <span className="text-sm text-gray-600">Proficient</span>
+              <div className="w-4 h-4 bg-blue-400 dark:bg-orange-500 rounded-full"></div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Proficient
+              </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">Expert</span>
+              <div className="w-4 h-4 bg-blue-500 dark:bg-orange-600 rounded-full"></div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Expert
+              </span>
             </div>
           </div>
         </div>

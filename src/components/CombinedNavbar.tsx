@@ -2,8 +2,14 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Home, Settings, Folder, Info, Mail } from "lucide-react";
 import { clsx } from "clsx";
+import { InputSwitch } from "primereact/inputswitch";
 
-export default function CombinedNavbar() {
+interface NavbarProps {
+  darkmode: boolean;
+  setDarkmode: (darkmode: boolean) => void;
+}
+
+export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -86,14 +92,17 @@ export default function CombinedNavbar() {
 
   return (
     <nav
-      className={`w-full z-50 transition-all duration-300 ${
+      className={`w-full z-50 transition-all duration-300 bg-gray-50 dark:bg-gray-950 ${
         isSticky
-          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-2"
+          ? "fixed top-0 left-0 right-0 shadow-md dark:shadow-lg dark:shadow-white/15 py-4"
           : "relative bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <NavLink to="/" className="text-xl font-bold text-blue-500">
+        <NavLink
+          to="/"
+          className="text-xl font-bold text-blue-500 dark:text-blue-400"
+        >
           Benjamin Koller
         </NavLink>
 
@@ -105,12 +114,12 @@ export default function CombinedNavbar() {
                 key={item.to}
                 onClick={() => navigateToSection(item.to)}
                 className={clsx(
-                  "flex items-center gap-2 font-medium transition-colors hover:text-blue-500",
+                  "flex items-center gap-2 font-medium transition-colors hover:text-blue-500 dark:hover:text-blue-400",
                   location.pathname === "/" && location.hash === `#${item.to}`
-                    ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                    ? "text-blue-600 dark:text-blue-300  border-b-2 border-blue-600 dark:border-blue-300 pb-1"
                     : isSticky
-                    ? "text-gray-800"
-                    : "text-gray-800"
+                    ? "text-gray-800 dark:text-gray-200"
+                    : "text-gray-800 dark:text-gray-200"
                 )}
               >
                 {item.icon}
@@ -122,12 +131,12 @@ export default function CombinedNavbar() {
                 to={item.to}
                 className={({ isActive }) =>
                   clsx(
-                    "flex items-center gap-2 font-medium transition-colors hover:text-blue-500",
+                    "flex items-center gap-2 font-medium transition-colors hover:text-blue-500 dark:hover:text-blue-400",
                     isActive
-                      ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                      ? "text-blue-600 dark:text-blue-300 border-b-2 border-blue-600 dark:border-blue-300 pb-1"
                       : isSticky
-                      ? "text-gray-800"
-                      : "text-gray-800"
+                      ? "text-gray-800 dark:text-gray-200"
+                      : "text-gray-800 dark:text-gray-200"
                   )
                 }
               >
@@ -136,6 +145,29 @@ export default function CombinedNavbar() {
               </NavLink>
             )
           )}
+          <label
+            htmlFor="Darkmode"
+            className={"flex flex-row items-center gap-2 select-none"}
+          >
+            <InputSwitch
+              name="Darkmode"
+              checked={darkmode}
+              onChange={(e) => setDarkmode(e.value)}
+              key="Darkmode"
+            />
+            <span
+              className={clsx(
+                "flex items-center gap-2 font-medium transition-colors hover:text-blue-500 dark:hover:text-blue-400",
+                darkmode
+                  ? "text-blue-600 dark:text-blue-300"
+                  : isSticky
+                  ? "text-gray-800 dark:text-gray-200"
+                  : "text-gray-800 dark:text-gray-200"
+              )}
+            >
+              Darkmode
+            </span>
+          </label>
         </div>
 
         {/* Mobile Menu Button */}

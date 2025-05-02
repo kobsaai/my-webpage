@@ -3,11 +3,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Features from "./pages/Features";
 import Projects from "./pages/Projects";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CombinedNavbar from "./components/CombinedNavbar";
 import Contact from "./pages/Contact";
 
 function App() {
+  const [darkmode, setDarkmode] = useState(false);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -15,7 +16,6 @@ function App() {
     }
   };
 
-  // Wenn die URL einen Hash enthält, zu dieser Sektion scrollen
   useEffect(() => {
     if (window.location.hash) {
       const id = window.location.hash.replace("#", "");
@@ -25,10 +25,18 @@ function App() {
     }
   });
 
+  useEffect(() => {
+    if (darkmode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkmode]);
+
   return (
-    <div className="App">
+    <div className="App bg-gray-50 dark:bg-gray-950">
       <div className="p-[2rem] border-[10px] mb-[1rem]">
-        <CombinedNavbar />
+        <CombinedNavbar darkmode={darkmode} setDarkmode={setDarkmode} />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
