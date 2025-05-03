@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Home, Settings, Folder, Info, Mail } from "lucide-react";
+import { Home, Settings, Folder, Info, Mail, SunMoon } from "lucide-react";
 import { clsx } from "clsx";
 import { InputSwitch } from "primereact/inputswitch";
 
@@ -172,7 +172,7 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-800"
+          className="md:hidden text-gray-800 dark:text-gray-200"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <svg
@@ -203,7 +203,7 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-gray-50 dark:bg-gray-950 shadow-lg dark:shadow-none ">
           <div className="container mx-auto px-4 py-3">
             {navItems.map((item) =>
               item.isSection ? (
@@ -211,10 +211,10 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
                   key={item.to}
                   onClick={() => navigateToSection(item.to)}
                   className={clsx(
-                    "flex items-center gap-2 w-full text-left py-2 hover:text-blue-500",
+                    "flex items-center gap-2 w-full text-left py-2 hover:text-blue-500 dark:hover:text-blue-400",
                     location.pathname === "/" && location.hash === `#${item.to}`
-                      ? "text-blue-600 font-medium"
-                      : "text-gray-800"
+                      ? "text-blue-600 font-medium dark:text-blue-300"
+                      : "text-gray-800 dark:text-gray-200"
                   )}
                 >
                   {item.icon}
@@ -227,8 +227,10 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
                     clsx(
-                      "flex items-center gap-2 w-full text-left py-2 hover:text-blue-500",
-                      isActive ? "text-blue-600 font-medium" : "text-gray-800"
+                      "flex items-center gap-2 w-full text-left py-2 hover:text-blue-500 dark:hover:text-blue-400",
+                      isActive
+                        ? "text-blue-600 font-medium dark:text-blue-300"
+                        : "text-gray-800 dark:text-gray-200"
                     )
                   }
                 >
@@ -237,6 +239,29 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
                 </NavLink>
               )
             )}
+            <label
+              htmlFor="Darkmode"
+              className={"flex flex-row items-center gap-2 select-none"}
+            >
+              <InputSwitch
+                name="Darkmode"
+                checked={darkmode}
+                onChange={(e) => setDarkmode(e.value)}
+                key="Darkmode"
+              />
+              <span
+                className={clsx(
+                  "flex items-center gap-2 font-medium transition-colors hover:text-blue-500 dark:hover:text-blue-400",
+                  darkmode
+                    ? "text-blue-600 dark:text-blue-300"
+                    : isSticky
+                    ? "text-gray-800 dark:text-gray-200"
+                    : "text-gray-800 dark:text-gray-200"
+                )}
+              >
+                {<SunMoon size={18} />}
+              </span>
+            </label>
           </div>
         </div>
       )}
