@@ -32,10 +32,6 @@ Die Webseite wird automatisch auf AWS S3 deployed, sobald Änderungen im `main`-
 ┣ 📜 vite.config.ts
 ┗ 📜 README.md
 
-bash
-Kopieren
-Bearbeiten
-
 ## 🧑‍💻 Ziel
 
 Das Portfolio dient als zentrale Anlaufstelle, um meine bisherigen Projekte zu präsentieren, mehr über mich zu erfahren und mich bei Bedarf kontaktieren zu können. Ich nutze die Seite auch, um neue Technologien auszuprobieren und Webtechniken zu vertiefen.
@@ -43,9 +39,6 @@ Das Portfolio dient als zentrale Anlaufstelle, um meine bisherigen Projekte zu p
 ## 🔧 Setup und lokale Entwicklung
 
 ```bash
-# Repository klonen
-git clone https://github.com/dein-github-benutzername/portfolio.git
-
 # Abhängigkeiten installieren
 cd portfolio
 npm install
