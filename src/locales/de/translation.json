@@ -1,0 +1,27 @@
+{
+  "aboutMe": "Über mich",
+  "greeting": "Hallo, ich bin Benjamin!",
+  "intro": "Als Fullstack Software Developer mit Wurzeln im Finanzwesen verbinde ich technische Expertise mit einem tiefen Verständnis für Kundenbedürfnisse und Geschäftsprozesse.",
+  "career": "Mein Werdegang",
+  "philosophy": "Meine Philosophie",
+  "technicalExpertise": "Meine technische Expertise",
+  "besideWork": "Neben der Arbeit",
+  "futureVision": "Meine Zukunftsvision",
+  "contact": "Kontakt aufnehmen",
+  "viewProjects": "Meine Projekte ansehen",
+
+  "careerText1": "Meine Reise in die Welt der Softwareentwicklung begann bereits früh. Während meiner Schulzeit am Thomas Mann Gymnasium in Budapest entwickelte ich eine Leidenschaft für Mathematik und Physik, die mich zum Informatikstudium an der Eötvös-Loránd-Universität führte. Parallel dazu sammelte ich erste praktische Erfahrungen im elterlichen Betrieb, wo ich an der Entwicklung und Integration von Datenbanken und der Automatisierung von Geschäftsabläufen arbeitete.",
+  "careerText2": "Mein beruflicher Weg führte mich zunächst in die Finanzbranche, wo ich als selbständiger Handelsvertreter wertvolle Erfahrungen im Umgang mit Kunden und in der Entwicklung maßgeschneiderter Lösungen sammeln konnte. Gleichzeitig übernahm ich als Teamleiter bei Events und Messen Verantwortung für Teams mit bis zu 30 Personen und entwickelte dabei meine Führungsqualitäten weiter.",
+  "careerText3": "2021 entschied ich mich, meiner Leidenschaft für die Informatik vollständig zu folgen und absolvierte eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung. Diese formale Ausbildung, kombiniert mit meinem Praktikum und der anschließenden Festanstellung bei Team Internet Service GmbH, hat mein Verständnis für moderne Softwareentwicklung vertieft und erweitert.",
+
+  "philosophyText": "In meiner Arbeit als Entwickler strebe ich danach, komplexe technische Herausforderungen in intuitive und effiziente Lösungen zu verwandeln. Ich glaube fest daran, dass gute Software nicht nur funktional, sondern auch benutzerfreundlich sein muss. Meine Erfahrung in der Kundenberatung hat mir gezeigt, wie wichtig es ist, die tatsächlichen Bedürfnisse der Endnutzer zu verstehen und diese in den Mittelpunkt der Entwicklung zu stellen.",
+
+  "quote": "Technologie sollte Probleme lösen, nicht neue schaffen. Mein Ziel ist es, Software zu entwickeln, die nicht nur technisch solide ist, sondern auch echten Mehrwert für ihre Nutzer bietet.",
+
+  "expertiseText": "Als Fullstack-Entwickler arbeite ich mit einem breiten Spektrum an Technologien. Im Frontend setze ich auf moderne JavaScript-Frameworks wie React, kombiniert mit TypeScript für typsichere Codebasen. Im Backend entwickle ich mit Python und nutze diverse AWS-Services für skalierbare und zuverlässige Cloud-Lösungen. Mein Verständnis von Datenbanksystemen und DevOps-Praktiken rundet mein Profil ab und ermöglicht es mir, am gesamten Entwicklungszyklus mitzuwirken.",
+
+  "besideWorkText1": "Wenn ich nicht gerade code, verbringe ich Zeit mit meinem Hund Bronco, der mich zu regelmäßigen Pausen und Spaziergängen an der frischen Luft zwingt – was meiner Kreativität und Problemlösungsfähigkeit zugute kommt. Als leidenschaftlicher NFL-Fan verfolge ich die Saison intensiv und genieße die strategische Tiefe des Spiels. Seit kurzem habe ich auch das Golfen für mich entdeckt und arbeite kontinuierlich daran, mein Handicap zu verbessern.",
+  "besideWorkText2": "Diese Interessen helfen mir nicht nur dabei, einen klaren Kopf zu bewahren, sondern lehren mich auch wertvolle Lektionen über Teamarbeit, Strategie und kontinuierliche Verbesserung – Prinzipien, die ich auch in meiner Arbeit als Entwickler anwende.",
+
+  "futureText": "Ich strebe danach, mich kontinuierlich weiterzuentwickeln und mein Wissen in den Bereichen Cloud-Architektur, DevOps und moderne Frontend-Frameworks zu vertiefen. Langfristig möchte ich an innovativen Projekten mitwirken, die einen positiven Einfluss auf den Alltag der Menschen haben, und meine vielfältigen Erfahrungen einbringen, um Brücken zwischen Technologie und Benutzerbedürfnissen zu bauen."
+}

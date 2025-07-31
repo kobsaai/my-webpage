@@ -1,0 +1,27 @@
+{
+  "aboutMe": "About Me",
+  "greeting": "Hi, I'm Benjamin!",
+  "intro": "As a Fullstack Software Developer with a background in finance, I combine technical expertise with a deep understanding of customer needs and business processes.",
+  "career": "My Journey",
+  "philosophy": "My Philosophy",
+  "technicalExpertise": "My Technical Expertise",
+  "besideWork": "Outside of Work",
+  "futureVision": "My Vision for the Future",
+  "contact": "Get in Touch",
+  "viewProjects": "View My Projects",
+
+  "careerText1": "My journey into software development began early. During my school years at the Thomas Mann Gymnasium in Budapest, I developed a passion for mathematics and physics, which led me to study computer science at Eötvös Loránd University. At the same time, I gained hands-on experience in my family’s business, working on database development and the automation of business processes.",
+  "careerText2": "My professional path initially led me to the financial sector, where I worked as a self-employed sales representative and gained valuable experience in client interaction and tailored solution development. I also took on team leadership roles at events and trade fairs, managing teams of up to 30 people and honing my leadership skills.",
+  "careerText3": "In 2021, I decided to fully pursue my passion for computer science and completed a vocational training program as an application development specialist. This formal education, combined with my internship and subsequent full-time position at Team Internet Service GmbH, has deepened and expanded my understanding of modern software development.",
+
+  "philosophyText": "As a developer, I strive to turn complex technical challenges into intuitive and efficient solutions. I firmly believe that good software should not only be functional but also user-friendly. My experience in customer consulting has taught me how important it is to truly understand end users’ needs and make them the focus of development.",
+
+  "quote": "Technology should solve problems, not create new ones. My goal is to develop software that is not only technically sound but also provides real value to its users.",
+
+  "expertiseText": "As a fullstack developer, I work with a wide range of technologies. On the frontend, I use modern JavaScript frameworks like React, combined with TypeScript for type-safe codebases. On the backend, I develop with Python and leverage various AWS services for scalable and reliable cloud solutions. My understanding of database systems and DevOps practices rounds out my profile and enables me to contribute across the entire development lifecycle.",
+
+  "besideWorkText1": "When I’m not coding, I spend time with my dog Bronco, who keeps me active with regular walks — which boosts both my creativity and problem-solving skills. As a passionate NFL fan, I follow the season closely and enjoy the strategic depth of the game. I’ve recently discovered a passion for golf and am working continuously to improve my handicap.",
+  "besideWorkText2": "These interests not only help me stay mentally balanced but also teach me valuable lessons about teamwork, strategy, and continuous improvement — principles I apply in my work as a developer as well.",
+
+  "futureText": "I aim to continuously grow and deepen my knowledge in cloud architecture, DevOps, and modern frontend frameworks. In the long term, I want to contribute to innovative projects that positively impact people’s everyday lives and use my diverse experience to bridge the gap between technology and user needs."
+}

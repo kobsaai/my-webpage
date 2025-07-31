@@ -16,15 +16,15 @@ interface Skill {
 const TechSkills: React.FC = () => {
   const skills: Skill[] = [
     // Frontend
-    { name: "React", level: "Competent", category: "Frontend" },
-    { name: "TypeScript", level: "Advanced Beginner", category: "Frontend" },
-    { name: "JavaScript", level: "Competent", category: "Frontend" },
-    { name: "HTML/CSS", level: "Advanced Beginner", category: "Frontend" },
-    { name: "Tailwind CSS", level: "Advanced Beginner", category: "Frontend" },
+    { name: "React", level: "Proficient", category: "Frontend" },
+    { name: "TypeScript", level: "Competent", category: "Frontend" },
+    { name: "JavaScript", level: "Proficient", category: "Frontend" },
+    { name: "HTML/CSS", level: "Competent", category: "Frontend" },
+    { name: "Tailwind CSS", level: "Competent", category: "Frontend" },
 
     // Backend
-    { name: "Python", level: "Competent", category: "Backend" },
-    { name: "Java", level: "Beginner", category: "Backend" },
+    { name: "Python", level: "Proficient", category: "Backend" },
+    { name: "Java", level: "Competent", category: "Backend" },
     { name: "PHP", level: "Advanced Beginner", category: "Backend" },
     { name: "C++", level: "Beginner", category: "Backend" },
     { name: "VBA", level: "Advanced Beginner", category: "Backend" },
@@ -35,7 +35,7 @@ const TechSkills: React.FC = () => {
     { name: "AWS Athena", level: "Advanced Beginner", category: "Database" },
 
     // DevOps
-    { name: "AWS", level: "Advanced Beginner", category: "DevOps" },
+    { name: "AWS", level: "Competent", category: "DevOps" },
     { name: "Docker", level: "Advanced Beginner", category: "DevOps" },
     { name: "Git", level: "Proficient", category: "DevOps" },
     { name: "CI/CD", level: "Advanced Beginner", category: "DevOps" },

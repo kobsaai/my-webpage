@@ -3,6 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Home, Settings, Folder, Info, Mail, SunMoon } from "lucide-react";
 import { clsx } from "clsx";
 import { InputSwitch } from "primereact/inputswitch";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarProps {
   darkmode: boolean;
@@ -145,6 +146,7 @@ export default function CombinedNavbar({ darkmode, setDarkmode }: NavbarProps) {
               </NavLink>
             )
           )}
+          <LanguageSwitcher />
           <label
             htmlFor="Darkmode"
             className={"flex flex-row items-center gap-2 select-none"}
